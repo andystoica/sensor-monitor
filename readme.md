@@ -8,13 +8,13 @@ On the fun side (optional), Illustrator was used for schematics and PCB layouts 
 
 ## In development
 
-###Platform
+### Platform
 
 - [x] Linux server(centOS) running Docker platform
 - [x] Prometheus for collecting data from an array of wireless sensors
 - [x] Grafana for building gorgeous dashboards displaying the collected data
 
-###Data sources
+### Data sources
 
 - [x] Node_exporter provides real time metrics for the running host
 - [x] Array or Arduino based wireless sensors collecting information about air, light, humidity and noise
@@ -22,7 +22,7 @@ On the fun side (optional), Illustrator was used for schematics and PCB layouts 
 	-  [x] Wireless outdoor Air, Light and Soil sensors with BME280, BH1750 and SEN0193
 	-  [ ] Wireless outdoor UV and background noise sensor
 
-###Home automation
+### Home automation
 - [ ] Control low voltage garden lights based on time of day and light intensity data
 - [ ] Control data cabinet PWM fan based on environmental data
 - [ ] Irrigate plants and flowers based on soil moisture data
