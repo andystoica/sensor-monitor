@@ -34,9 +34,9 @@ void readSensorBME280(float data[3]) {
     delay(100);
   } while (!bme280.hasValue());
   
-  data[0] = bme280.getTemperature();
-  data[1] = round(bme280.getHumidity() * 100) / 100;
-  data[2] = round(bme280.getPressure()) / 100;
+  data[0] = bme280.getTemperature() + BME280_CALIB_TEMPERATURE;
+  data[1] = round(bme280.getHumidity() * 100) / 100 + BME280_CALIB_HUMIDITY;
+  data[2] = round(bme280.getPressure()) / 100 + BME280_CALIB_PRESSURE;
   return;
 }
 
