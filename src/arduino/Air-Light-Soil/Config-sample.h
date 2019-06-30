@@ -9,7 +9,14 @@
 // HTTP Server
 #define HTTP_PORT 9100                // The HTTP port the sensor will be listening to
 
+// Labels
+#define LABELS ""                           // Labels to be attached to each metric {label1="value1", label2="value2" ... }
+
 // Sensors
 #define BME280_I2C_ADDR 0x76          // I2C Address for BME280 sensor. Can be 0x76 ot 0x77
-#define SEN0193_CALIBRATION_MIN 360   // The SEN0193 minimum value at 100% water
-#define SEN0193_CALIBRATION_MAX 760   // The SEN0193 maximum value at 100% dry
+#define BME280_CALIB_TEMPERATURE 0.0  // Temperature compesantion to reference sensor in degrees C
+#define BME280_CALIB_HUMIDITY 0.0     // Humidty compensation to reference sensor in percentage %H
+#define BME280_CALIB_PRESSURE 0.0     // Pressure compesation to reference sensor in hectopascals hPa
+
+#define SEN0193_CALIB_MIN 360         // The SEN0193 minimum value at 100% water
+#define SEN0193_CALIB_MAX 760         // The SEN0193 maximum value at 100% dry

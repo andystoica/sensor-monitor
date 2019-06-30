@@ -82,15 +82,15 @@ void handleGetMetrics() {
   
   output  = "#HELP sensor_air_temperature Air temperature in degrees Celsius\n";
   output += "#TYPE sensor_air_temperature gauge\n";
-  output += "sensor_air_temperature " + String(BME280Data[0]) + "\n";
+  output += "sensor_air_temperature" + String(LABELS) + " " + String(BME280Data[0]) + "\n";
 
   output += "#HELP sensor_air_relative_humidity Air relative humidity in %H\n";
   output += "#TYPE sensor_air_relative_humidity gauge\n";
-  output += "sensor_air_relative_humidity " + String(BME280Data[1]) + "\n";
+  output += "sensor_air_relative_humidity" + String(LABELS) + " " + String(BME280Data[1]) + "\n";
 
   output += "#HELP sensor_air_pressure Air pressure in hPa\n";
   output += "#TYPE sensor_air_pressure gauge\n";
-  output += "sensor_air_pressure " + String(BME280Data[2]) + "\n";
+  output += "sensor_air_pressure" + String(LABELS) + " " + String(BME280Data[2]) + "\n";
 
   server.send(200, "text/plain", output);
 }
