@@ -171,9 +171,9 @@ Deploy a node_exporter container to obtain the metrics for the host server.
 	$ docker container run \
 		--detach \
 		--restart always \
-		--name node_exporter \
+		--name node-exporter \
 		--network metrics \
-		--hostname node_exporter \
+		--hostname node-exporter \
 		--publish 9100:9100 \
 		prom/node-exporter
 
@@ -182,6 +182,21 @@ Test deployment by sending a request to `http://server_address:9100/metrics` in 
 Verify that Prometheus can access the data by accessing the `http://server_address:9090/targets` in a web browser.
 
 
+
+---
+## Open Weather Exporter
+
+Deploy a node_exporter container to obtain metrics from the Open Weather Map API service converted to Open Metrics for Prometheus.
+
+	$ docker container run \
+		--detach \
+		--restart always \
+		--name ow-exporter \
+		--network metrics \
+		--hostname ow-exporter \
+		--publish 9100:9100 \
+		--env-file ~/config/open-weather-exporter/.env \
+		andystoica/open-weather-exporter
 
 ---
 ## Grafana
