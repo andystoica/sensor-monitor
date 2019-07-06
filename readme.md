@@ -2,7 +2,7 @@
 
 This project is about learning, testing and documenting interconnected technology. It combines modern server platforms, popular monitoring tools, established programming languages and techniques to achieve a functional and modular IT system. It has a bit of everything: linux, networking, software development with RESTful API, electronics and automation.
 
-On the server side there is centOS, Docker, Prometheus and Grafana. Software developments and RESTful APIs are written in REACT, node.js while the sensors are built using the D1 Mini Arduino IoT platform and written in C++.
+On the server side there is centOS, Docker, Prometheus and Grafana. Software developments and RESTful APIs are written in REACT and node.js while the sensors are built using the D1 Mini Arduino IoT platform and written in C++.
 
 On the fun side (optional), Illustrator was used for schematics and PCB layouts while Stepcraft 600 CNC machine for building the sensors modules.
 
@@ -17,9 +17,11 @@ On the fun side (optional), Illustrator was used for schematics and PCB layouts 
 ### Data sources
 
 - [x] Node_exporter provides real time metrics for the running host
+- [x] Open Weather Exporter fetches data from the open API and makes it available to Prometheus in Open Metrics format
 - [x] Array or Arduino based wireless sensors collecting information about air, light, humidity and noise
 	- 	[x] Wireless indoor Air sensor with D1 Mini and BME280 (temperature, relative humidity and pressure)
-	-  [x] Wireless outdoor Air, Light and Soil sensors with BME280, BH1750 and SEN0193
+	-  [x] Wireless outdoor Air and Ambient Light sensors with BME280 and BH1750
+	-  [ ] Wireless outdoor Light Controller with Ambient Light and Soil moisture sensors (BH1750 and SEN0193)
 	-  [ ] Wireless outdoor UV and background noise sensor
 
 ### Home automation
